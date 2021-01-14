@@ -1,0 +1,84 @@
+// media query
+@mixin mobile {
+    @media screen and (max-width: 720px) {
+        @content;
+    }
+}
+
+// width, height size 같게 하려면 @include size(100px);
+//                 다르게 하려면 @include size(100px, 1em);
+@mixin size($width, $height : $width) {
+	width: $width;
+	height: $height;
+}
+
+// image-replace 오리지널 컨텐츠 숨김처리
+@mixin ir() {
+	overflow: hidden;
+	text-indent: -9999px;
+	font-size: 0.01em;
+	color: transparent;
+}
+
+// ellipsis
+@mixin ellipsis() {
+	overflow: hidden;
+	white-space: nowrap;
+	-ms-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+}
+@mixin multi-ellipsis($line : 2, $line-height: 1.5, $height-fixed: false) {
+	display: block;
+	display: -webkit-box;
+	@if $height-fixed == true { // 유동적인 경우 사용
+		height: ($line * $line-height) * 1em;
+		max-height: ($line * $line-height) * 1em;
+	} @else {
+		max-height: ($line * $line-height) * 1em;
+	}
+	text-overflow: ellipsis;
+	line-height: $line-height * 1em;
+	-webkit-line-clamp: $line;
+	-webkit-box-orient: vertical;
+	word-wrap:break-word;
+	overflow: hidden;
+}
+
+// clearfix
+@mixin clearfix {
+    // *zoom: 1; //ie8이하 브라우저 대응 여부
+	&:before,
+	&:after {
+        content: "";
+		display: table; //display:block; 대신 table; 사용
+	}
+	&:after {
+        clear: both;
+	}
+}
+@mixin cf {
+    @include clearfix;
+}
+
+// blind
+// 시각적으로 숨기고, 스크린리더에서는 이용가능:
+@mixin blind () {
+	position: absolute !important;
+	display: block;
+	width: 0 !important;
+	height: 0 !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	border: 0 !important;
+	overflow: hidden !important;
+	clip: rect(0 0 0 0) !important;
+	&.focusable:active,
+	&.focusable:focus {
+		position: static;
+		height: auto;
+		width: auto;
+		margin: 0;
+		clip: auto;
+		overflow: visible;
+	}
+}
