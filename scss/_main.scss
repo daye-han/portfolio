@@ -1,0 +1,90 @@
+* {
+    word-break: break-word;
+}
+html {
+    scroll-behavior: smooth;
+}
+.container {
+    // padding: 0.3rem;
+    box-sizing: border-box;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    &-inner {
+        max-width: 1140px;
+        margin: 0 auto;
+        @include cf;
+        .logo-wrap {
+            float: left;
+        }
+        .navigation-wrap {
+            float: right;
+        }
+    }
+}
+.navigation-wrap {
+    ul {
+        display: flex;
+        li {
+            margin-left: 10px;
+            a {
+                display: block;
+                padding: 0 5px;
+            }
+        }
+    }
+}
+.section {
+    min-height: 80vh;
+    padding: 20px 0;
+    box-sizing: border-box;
+    // main section
+    &-main {
+
+    }
+    // about section
+    &-about {
+
+    }
+    // portfolio section
+    &-portfolio {
+
+    }
+    // contact section
+    &-contact {
+
+    }
+    &-inner {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+    &-title-wrap {
+        .section-title {
+            font-size: 48px;
+            font-weight: 700;
+        }
+    }
+}
+// portfolio
+.portfolio-list {
+    @include cf;
+    li {
+        float: left;
+        width: 50%;
+        min-height: 200px;
+        margin-bottom: 30px;
+        visibility: hidden;
+        // transition: background-color 0.3s linear;
+        &:nth-child(2n-1) {
+            clear: both;
+        }
+        &.is-active {
+        //   background-color: rgba(0,0,0,0.1);
+        }
+    }
+}
+

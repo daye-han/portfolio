@@ -1,0 +1,37 @@
+* { word-break: break-word; }
+
+html { scroll-behavior: smooth; }
+
+.container { box-sizing: border-box; }
+
+.header { position: fixed; top: 0; left: 0; width: 100%; z-index: 100; }
+
+.header-inner { max-width: 1140px; margin: 0 auto; }
+
+.header-inner:before, .header-inner:after { content: ""; display: table; }
+
+.header-inner:after { clear: both; }
+
+.header-inner .logo-wrap { float: left; }
+
+.header-inner .navigation-wrap { float: right; }
+
+.navigation-wrap ul { display: flex; }
+
+.navigation-wrap ul li { margin-left: 10px; }
+
+.navigation-wrap ul li a { display: block; padding: 0 5px; }
+
+.section { min-height: 80vh; padding: 20px 0; box-sizing: border-box; }
+
+.section-inner { max-width: 1140px; margin: 0 auto; }
+
+.section-title-wrap .section-title { font-size: 48px; font-weight: 700; }
+
+.portfolio-list:before, .portfolio-list:after { content: ""; display: table; }
+
+.portfolio-list:after { clear: both; }
+
+.portfolio-list li { float: left; width: 50%; min-height: 200px; margin-bottom: 30px; visibility: hidden; }
+
+.portfolio-list li:nth-child(2n-1) { clear: both; }

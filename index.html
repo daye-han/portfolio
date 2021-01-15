@@ -9,95 +9,211 @@
     <link rel="stylesheet" href="./css/common.css">
 </head>
 <body>
-    <header>
-        <h1>로고</h1>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Portfolio</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
-    </header>
-    <section>
-        <h2>Home</h2>
-        <h3>HAN CAN DO IT</h3>
-        웹 퍼블리셔로서, 제 일을 사랑하고 그 일을 스스로 주도하며 사용자에게 가치 있는 경험을 줄 수 있는 코드를 작성하고 싶습니다.
-    </section>
-    <section>
-        <h2>About</h2>
-        안녕하세요 웹 퍼블리셔 2년차 한다예입니다.
-
-        경력: 젠나인소프트 프론트엔드팀 주임(2019. 06 ~ 재직중)
-            E-COMMERCE website/mobile 사이트 구축
-        기술: HTML, CSS, JavaScript, jQuery 활용
-            웹표준 웹접근성, 크로스브라우징, 시멘틱 마크업
-            SCSS, Gulp 빌드 자동화 도구 사용
-            Git, SVN
-            Jira, Slack 협업 툴
-            Zeplin, Jenkins 툴 사용
-        자격증: 웹디자인기능사, 정보처리산업기사, 컴퓨터활용능력 2급
-    </section>
-    <section>
-        <h2>Portfolio</h2>
-        <ul>
-            <li>
-                프로젝트명: 메가마트몰
-                부문: website/mobile
-                기술: HTML/CSS/JavaScript/Jquery
-                프로젝트 기간: 2020.08 - 2021.01
-                url: <a href="https://www.megamart.com" target="_blank" title="메가마트몰 이동">https://www.megamart.com</a>
-            </li>
-            <li>
-                프로젝트명: 한국렌탈 B2B플랫폼 구축
-                부문: mobile
-                기술: HTML/CSS/JavaScript/Jquery
-                프로젝트 기간: 2020.12
-            </li>
-            <li>
-                프로젝트명: SPC 해피포인트
-                부문: website/mobile/APP
-                기술: HTML/CSS/JavaScript/Jquery
-                프로젝트 기간: 2020.04 - 2020.08
-                url: <a href="https://www.happypointcard.com" target="_blank" title="해피포인트 이동">https://www.happypointcard.com</a>
-            </li>
-            <li>
-                프로젝트명: nunc 온라인몰 리뉴얼
-                부문: website/mobile
-                기술: HTML/CSS/JavaScript/Jquery
-                프로젝트 기간: 2019.12 - 2020.04
-                url: <a href="https://www.mynunc.com" target="_blank" title="nunc 이동">https://www.mynunc.com</a>
-            </li>
-            <li>
-                프로젝트명: 노루페인트 종합인테리어 B2C플랫폼 구축
-                부문: website/mobile
-                기술: HTML/CSS/JavaScript/Jquery
-                프로젝트 기간: 2019.08 - 2019.12
-                url: <a href="https://www.howhomemall.com" target="_blank" title="하우홈몰 이동">https://www.howhomemall.com</a>
-            </li>
-            <li>
-                프로젝트명: AK뷰티몰 시스템 재구축
-                부문: website/mobile
-                기술: HTML/CSS/JavaScript/Jquery
-                프로젝트 기간: 2019.06 - 2019.07
-                url: <a href="https://www.akbeauty.co.kr" target="_blank" title="AK뷰티몰 이동">https://www.akbeauty.co.kr</a>
-            </li>
-        </ul>
-    </section>
-    <section>
-        <h2>Contact</h2>
-        <a href="mailto:handot38@gmail.com">handot38@gmail.com</a>
-        <a href="https://github.com/daye-han" target="_blank" title="github 이동">https://github.com/daye-han</a>
-    </section>
-    <footer>
-        <div class="footer-inner">
-            <div class="footer-copyright">© 2021 hancandoit</div>
-            <div class="footer-madeby">Made by</div>
+    <div class="container">
+        <header class="header">
+            <div class="header-inner">
+                <div class="logo-wrap">
+                    <h1 class="logo">Do it</h1>
+                </div>
+                <nav class="navigation-wrap">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="content">
+            <section class="section section-main" id="home">
+                <div class="section-inner">
+                    <!-- <h2>Home</h2> -->
+                    <h3>HAN CAN DO IT</h3>
+                    <p>Web Publisher<br>Han daye</p>
+                </div>
+            </section>
+            <section class="section section-about" id="about">
+                <div class="section-inner">
+                    <div class="section-title-wrap">
+                        <h2 class="section-title">About</h2>
+                    </div>
+                    <p>안녕하세요 웹 퍼블리셔 2년차 한다예입니다.<br>
+                    웹 퍼블리셔로서, 제 일을 사랑하고 그 일을 스스로 주도하며 사용자에게 가치 있는 경험을 줄 수 있는 코드를 작성하고 싶습니다.</p>
+                    <p>경력: 젠나인소프트 프론트엔드팀 주임(2019. 06 ~ 재직중)
+                    E-COMMERCE Website/Mobile 사이트 구축</p>
+                    <div>기술: HTML, CSS, JavaScript, jQuery 활용
+                    웹표준 웹접근성, 크로스브라우징, 시멘틱 마크업
+                    SCSS, Gulp 빌드 자동화 도구 사용
+                    Git, SVN
+                    Jira, Slack 협업 툴
+                    Zeplin, Jenkins 툴 사용</div>
+                    <div>
+                        자격증: 웹디자인기능사, 정보처리산업기사, 컴퓨터활용능력 2급
+                    </div>
+                </div>
+            </section>
+            <section class="section section-portfolio" id="portfolio">
+                <div class="section-inner">
+                    <div class="section-title-wrap">
+                        <h2 class="section-title">Portfolio</h2>
+                    </div>
+                    <ul class="portfolio-list">
+                        <li>
+                            <div class="description-list-wrap">
+                                <dl>
+                                    <dt>프로젝트명</dt>
+                                    <dd>메가마트몰</dd>
+                                </dl>
+                                <dl>
+                                    <dt>부문</dt>
+                                    <dd>Website/Mobile</dd>
+                                </dl>
+                                <dl>
+                                    <dt>기술</dt>
+                                    <dd>HTML/CSS/JavaScript/Jquery</dd>
+                                </dl>
+                                <dl>
+                                    <dt>프로젝트 기간</dt>
+                                    <dd>2020.08 - 2021.01</dd>
+                                </dl>
+                                <dl>
+                                    <dt>URL</dt>
+                                    <dd><a href="https://www.megamart.com" target="_blank" title="메가마트몰 이동">https://www.megamart.com</a></dd>
+                                </dl>
+                            </div>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>프로젝트명</dt>
+                                <dd>한국렌탈 B2B플랫폼 구축</dd>
+                            </dl>
+                            <dl>
+                                <dt>부문</dt>
+                                <dd>Mobile</dd>
+                            </dl>
+                            <dl>
+                                <dt>기술</dt>
+                                <dd>HTML/CSS/JavaScript/Jquery</dd>
+                            </dl>
+                            <dl>
+                                <dt>프로젝트 기간</dt>
+                                <dd>2020.12</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>프로젝트명</dt>
+                                <dd>SPC 해피포인트</dd>
+                            </dl>
+                            <dl>
+                                <dt>부문</dt>
+                                <dd>Website/Mobile/APP</dd>
+                            </dl>
+                            <dl>
+                                <dt>기술</dt>
+                                <dd>HTML/CSS/JavaScript/Jquery</dd>
+                            </dl>
+                            <dl>
+                                <dt>프로젝트 기간</dt>
+                                <dd>2020.04 - 2020.08</dd>
+                            </dl>
+                            <dl>
+                                <dt>URL</dt>
+                                <dd><a href="https://www.happypointcard.com" target="_blank" title="해피포인트 이동">https://www.happypointcard.com</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>프로젝트명</dt>
+                                <dd>nunc 온라인몰 리뉴얼</dd>
+                            </dl>
+                            <dl>
+                                <dt>부문</dt>
+                                <dd>Website/Mobile</dd>
+                            </dl>
+                            <dl>
+                                <dt>기술</dt>
+                                <dd>HTML/CSS/JavaScript/Jquery</dd>
+                            </dl>
+                            <dl>
+                                <dt>프로젝트 기간</dt>
+                                <dd>2019.12 - 2020.04</dd>
+                            </dl>
+                            <dl>
+                                <dt>URL</dt>
+                                <dd><a href="https://www.mynunc.com" target="_blank" title="nunc 이동">https://www.mynunc.com</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>프로젝트명</dt>
+                                <dd>노루페인트 종합인테리어 B2C플랫폼 구축</dd>
+                            </dl>
+                            <dl>
+                                <dt>부문</dt>
+                                <dd>Website/Mobile</dd>
+                            </dl>
+                            <dl>
+                                <dt>기술</dt>
+                                <dd>HTML/CSS/JavaScript/Jquery</dd>
+                            </dl>
+                            <dl>
+                                <dt>프로젝트 기간</dt>
+                                <dd>2019.08 - 2019.12</dd>
+                            </dl>
+                            <dl>
+                                <dt>URL</dt>
+                                <dd><a href="https://www.howhomemall.com" target="_blank" title="하우홈몰 이동">https://www.howhomemall.com</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>프로젝트명</dt>
+                                <dd>AK뷰티몰 시스템 재구축</dd>
+                            </dl>
+                            <dl>
+                                <dt>부문</dt>
+                                <dd>Website/Mobile</dd>
+                            </dl>
+                            <dl>
+                                <dt>기술</dt>
+                                <dd>HTML/CSS/JavaScript/Jquery</dd>
+                            </dl>
+                            <dl>
+                                <dt>프로젝트 기간</dt>
+                                <dd>2019.06 - 2019.07</dd>
+                            </dl>
+                            <dl>
+                                <dt>URL</dt>
+                                <dd><a href="https://www.akbeauty.co.kr" target="_blank" title="AK뷰티몰 이동">https://www.akbeauty.co.kr</a></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="section section-contact" id="contact">
+                <div class="section-inner">
+                    <div class="section-title-wrap">
+                        <h2 class="section-title">Contact</h2>
+                    </div>
+                    <a href="mailto:handot38@gmail.com">handot38@gmail.com</a>
+                    <a href="https://github.com/daye-han" target="_blank" title="github 이동">https://github.com/daye-han</a>
+                </div>
+            </section>
         </div>
-    </footer>
-    <div class="scroll-top">
-        <button type="button">최상단으로 이동하기</button>
+        <footer>
+            <div class="footer-inner">
+                <div class="footer-copyright">© 2021 hancandoit</div>
+                <div class="footer-madeby">Made by</div>
+            </div>
+        </footer>
+        <div class="scroll-top">
+            <button type="button">최상단으로 이동하기</button>
+        </div>
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+<script src="./js/common.ui.js"></script>
 </html>
