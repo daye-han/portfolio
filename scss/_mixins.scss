@@ -1,6 +1,13 @@
 // media query
-@mixin mobile {
-    @media screen and (max-width: 720px) {
+$breakpoint01 : 768px;
+$breakpoint02 : 1140px;
+@mixin breakpoint01 {
+    @media screen and (min-width: $breakpoint01) {
+        @content;
+    }
+}
+@mixin breakpoint02 {
+    @media screen and (min-width: $breakpoint02) {
         @content;
     }
 }

@@ -1,10 +1,10 @@
-@charset "UTF-8";
+@charset "utf-8";
 
 // utilities
 @import "./mixins";
 
 // base
-// @import "./typography";
+@import "./typography";
 
 // layout
 @import "./main";

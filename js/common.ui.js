@@ -1,21 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// Part 1
-// gsap.to('header', {
-//     autoAlpha: 0,
-//     scrollTrigger: {
-//         id: 'header',
-//         trigger: '.scrollTriggerLogo',
-//         start: 'top top+=100',
-//         end: '+=200',
-//         scrub: true,
-//         // markers: true
-//     }
-// });
-
 // Part 2
-const sections = document.querySelectorAll('ul > li');
-
+const sections = document.querySelectorAll('.scroll-ani');
 sections.forEach((section, index) => {
     gsap.to(section, {
         autoAlpha: 1,
@@ -37,3 +23,42 @@ sections.forEach((section, index) => {
         // markers: true
     })
 })
+
+// header fix
+headerFixFn();
+function headerFixFn() {
+    var $header = $('.header');
+    var $container = $('.container');
+    var _headerHeight;
+    if(!$header.length) return;
+    $(window).on('load scroll', function () {
+        // _headerHeight = $header.outerHeight();
+        $container.addClass('header-fix');
+        $header.addClass('is-fixed');
+    })
+}
+
+// scroll animation
+function scrollAnimate(value, time) {
+    $('html,body').animate({ scrollTop: value }, time);
+}
+
+// scroll top button fixed
+scrollTopButtonFixFn();
+function scrollTopButtonFixFn() {
+    var $topBtn = $('.scroll-top');
+    if(!$topBtn.length) return;
+    var _winHeight = $(window).height();
+    var _current;
+    $(window).on('scroll', function () {
+        _current = $(window).scrollTop();
+
+        if(_current > _winHeight) {
+            console.log(1);
+            $topBtn.addClass('is-fixed');
+        } else {
+            console.log(2);
+            $topBtn.removeClass('is-fixed');
+        }
+    })
+}
