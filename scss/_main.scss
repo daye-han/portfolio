@@ -294,8 +294,30 @@ $point-color : #e91b1f;
 }
 // contact
 .section-contact {
-    .section-inner {
-
+}
+.sns-list {
+    display: table;
+    margin: 0 auto;
+    li {
+        display: table-cell;
+        padding: 0 20px;
+        a {
+            display: block;
+        }
+        .ico {
+            display: block;
+            @include size(42px);
+            img {
+                display: block;
+                @include size(100%);
+            }
+        }
+        .sns-name {
+            display: block;
+            margin-top: 3px;
+            font-size: 14px;
+            text-align: center;
+        }
     }
 }
 // footer
