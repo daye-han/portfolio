@@ -37,6 +37,7 @@ $point-color : #e91b1f;
     .logo {
         a {
             display: block;
+            font-weight: 700;
             line-height: 2;
             color: #fff;
         }
@@ -47,12 +48,35 @@ $point-color : #e91b1f;
     ul {
         display: flex;
         li {
-            margin-left: 10px;
             a {
+                position: relative;
                 display: block;
                 padding: 0 5px;
+                font-weight: 700;
                 line-height: 2;
                 color: #fff;
+                transition: all .3s ease-out;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    @include size(100%);
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    background-color: #fff;
+                    @include transform(scale(1, 0));
+                    @include transform-origin(center bottom);
+                    transition: all .3s ease-out;
+                }
+                &:hover {
+                    color: black;
+                    &::before {
+                        @include transform(scale(1, 1));
+                    }
+                }
+            }
+            ~ li {
+                margin-left: 16px;
             }
         }
     }
@@ -177,7 +201,7 @@ $point-color : #e91b1f;
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            @include transform(translate(-50%, -50%));
         }
     }
     &::after {
@@ -300,7 +324,6 @@ $point-color : #e91b1f;
     margin: 0 auto;
     li {
         display: table-cell;
-        padding: 0 20px;
         a {
             display: block;
         }
@@ -317,6 +340,9 @@ $point-color : #e91b1f;
             margin-top: 3px;
             font-size: 14px;
             text-align: center;
+        }
+        ~ li {
+            padding-left: 40px;
         }
     }
 }
@@ -359,9 +385,16 @@ $point-color : #e91b1f;
         @include size(40px);
         @include ir;
         overflow: hidden;
-        background: transparent url('../images/btn-top.png') center center no-repeat;
+        background-color: transparent;
+        background-image: url('../images/btn-top.png');
+        background-position: center center;
+        background-repeat: no-repeat;
         background-size: 30px;
         border-radius: 50%;
+        transition: background 0.3s ease-out;
+        &:hover {
+            background-image: url('../images/btn-top-on.png');
+        }
     }
     &.is-fixed {
         opacity: 1;
