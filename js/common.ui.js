@@ -37,27 +37,80 @@ function scrollTopButtonFixFn() {
 }
 
 // scroll opacity animaiton
-gsap.registerPlugin(ScrollTrigger);
-
-const sections = document.querySelectorAll('.scroll-ani');
-sections.forEach((section, index) => {
+// gsap.registerPlugin(ScrollTrigger);
+var sections = document.querySelectorAll('.scroll-ani');
+for(var i=0; i<sections.length; i++){
+    var section = sections[i];
     gsap.to(section, {
         autoAlpha: 1,
         scrollTrigger: {
             trigger: section,
-            start: 'top bottom-=300',
+            start: 'top bottom-=250',
             toggleActions: 'play none none reverse',
-            // markers: true
+            // markers: { startColor: "green", endColor: "red", fontSize: "12px" },
         }
     });
+    // ScrollTrigger.create({
+    //     trigger: section,
+    //     start: 'top center',
+    //     end: () => `+=${section.clientHeight + 30}`,
+    //     toggleActions: 'play reverse none reverse',
+    // })
+}
 
-    ScrollTrigger.create({
-        trigger: section,
-        id: index + 1,
-        start: 'top center',
-        end: () => `+=${section.clientHeight + 30}`,
-        toggleActions: 'play reverse none reverse',
-        toggleClass: { targets: section, className: "is-active" },
-        // markers: true
-    })
-})
+// sections.forEach(function (section, index) {
+//     gsap.to(section, {
+//         autoAlpha: 1,
+//         scrollTrigger: {
+//             trigger: section,
+//             start: 'top bottom-=300',
+//             toggleActions: 'play none none reverse',
+//             // markers: true
+//         }
+//     });
+
+//     ScrollTrigger.create({
+//         trigger: section,
+//         id: index + 1,
+//         start: 'top center',
+//         // end: () => `+=${section.clientHeight + 30}`,
+//         toggleActions: 'play reverse none reverse',
+//         // toggleClass: { targets: section, className: "is-active" },
+//         // markers: true
+//     })
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// sections.forEach((section, index) => {
+//     gsap.to(section, {
+//         autoAlpha: 1,
+//         scrollTrigger: {
+//             trigger: section,
+//             start: 'top bottom-=300',
+//             toggleActions: 'play none none reverse',
+//             // markers: true
+//         }
+//     });
+
+//     ScrollTrigger.create({
+//         trigger: section,
+//         id: index + 1,
+//         start: 'top center',
+//         end: () => `+=${section.clientHeight + 30}`,
+//         toggleActions: 'play reverse none reverse',
+//         toggleClass: { targets: section, className: "is-active" },
+//         // markers: true
+//     })
+// })

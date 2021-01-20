@@ -133,8 +133,7 @@ $point-color : #e91b1f;
                 &::before {
                     display: none;
                 }
-                &:hover,
-                &:focus {
+                &:hover {
                     margin-left: 40px;
                     transition: all .4s;
                     transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
@@ -241,7 +240,7 @@ $point-color : #e91b1f;
 .portfolio-list {
     @include cf;
     li {
-        visibility: hidden;
+        // visibility: hidden;
         ~li {
             margin-top: 50px;
         }
@@ -424,4 +423,8 @@ $point-color : #e91b1f;
             }
         }
     }
+}
+
+.scroll-ani {
+    visibility: hidden;
 }
