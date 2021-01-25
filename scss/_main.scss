@@ -121,7 +121,7 @@ $point-color : #e91b1f;
         color: white;
         box-sizing: border-box;
         .main-title {
-            font-size: 42px;
+            font-size: 60px;
             font-weight: 700;
             .main-text {
                 display: block;
@@ -244,7 +244,6 @@ $point-color : #e91b1f;
         ~li {
             margin-top: 50px;
         }
-        // transition: background-color 0.3s linear;
         .img-wrap {
             position: relative;
             width: 100%;
@@ -296,9 +295,6 @@ $point-color : #e91b1f;
                     }
                 }
             }
-        }
-        &.is-active {
-            //   background-color: rgba(0,0,0,0.1);
         }
         @include breakpoint01 {
             float: left;
@@ -414,7 +410,7 @@ $point-color : #e91b1f;
             &::before {
                 display: block;
                 position: absolute;
-                top: 50%;
+                top: 9px;
                 left: 0;
                 content: '';
                 width: 5px;
