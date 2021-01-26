@@ -35,15 +35,24 @@ function showScrollTopButton() {
 }
 
 // scroll opacity animaiton
-var sections = document.querySelectorAll('.scroll-ani');
-for(var i=0; i<sections.length; i++){
-    var section = sections[i];
-    gsap.to(section, {
+var items = document.querySelectorAll('.scroll-ani');
+for(var i=0; i<items.length; i++){
+    var item = items[i];
+    gsap.to(item, {
         autoAlpha: 1,
         scrollTrigger: {
-            trigger: section,
-            start: 'top bottom-=250',
+            trigger: item,
+            start: 'top bottom-=200',
             toggleActions: 'play none none reverse',
         }
     });
 }
+gsap.to('.main-title', {
+    xPercent: 100,
+    ease: "none",
+    scrollTrigger: {
+        trigger: ".section-main",
+        start: "top top",
+        scrub: true
+    },
+});

@@ -1,7 +1,7 @@
 @font-face{
     font-family:'Maven Pro';
     src:local('Maven Pro Regular'),
-        url('../fonts/MavenPro-Regular.eot'),
+        url('../fonts/MavenPro-Regular.eot'), //ie8이하 대응
         url('../fonts/MavenPro-Regular.woff') format('woff'),
         url('../fonts/MavenPro-Regular.ttf') format('ttf');
     font-weight: 400;
