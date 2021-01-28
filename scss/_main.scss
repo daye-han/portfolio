@@ -113,16 +113,22 @@ $point-color : #e91b1f;
     height: 100vh;
     background-color: black;
     .section-inner {
-        display: flex;
-        height: 100%;
-        flex-direction: column;
-        justify-content: center;
-        padding: 0 30px;
-        color: white;
+        position: relative;
+        @include size(100%);
+        overflow: hidden;
         box-sizing: border-box;
         .main-title {
-            font-size: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include size(100%);
+            padding: 0 30px;
             font-weight: 700;
+            font-size: 60px;
+            color: white;
             .main-text {
                 display: block;
                 cursor: default;
